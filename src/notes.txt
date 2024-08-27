@@ -1,0 +1,1 @@
+docker container run --name=IncidentApi -dp 3001:3000 incident-api:perro
