@@ -54,6 +54,11 @@ export function generateIncidentEmailTemplate(
               text-align: center;
               font-size: 12px;
           }
+          .map-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px
+          }
       </style>
   </head>
   <body>
@@ -68,7 +73,7 @@ export function generateIncidentEmailTemplate(
               <p><strong>Longitud:</strong> ${lng}</p>
           </div>
           <div>
-            <img src="${mapImageUrl}"/>
+            <img class="map-image" src="${mapImageUrl}"/>
           </div>
           <div class="footer">
               <p>Este es un correo generado automáticamente. Por favor, no responda a este mensaje.</p>
