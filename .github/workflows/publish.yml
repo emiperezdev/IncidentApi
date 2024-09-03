@@ -19,5 +19,11 @@ jobs:
       - name: Build Docker Image
         run: docker build -t emiperezdev/incident-api:${{ github.sha }} .
 
+      - name: Tag Latest
+        run: docker tag emiperezdev/incident-api:${{ github.sha }} emiperezdev/incident-api:latest
+
+
       - name: Push Docker Image
-        run: docker push emiperezdev/incident-api:${{ github.sha }}
+        run: |
+          docker push emiperezdev/incident-api:${{ github.sha }}
+          docker push emiperezdev/incident-api:latest
