@@ -26,12 +26,6 @@ export class IncidentController {
       lat: lat,
       lng: lng
     });
-    const emailService = new EmailService();
-    emailService.sendEmail({
-      to: "rubenramirez.arellano99@gmail.com",
-      subject: title,
-      htmlBody: `<h1>${description}</h1>`
-    });
   
     return res.status(201).send(newIncident);
   }

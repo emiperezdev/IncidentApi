@@ -2,6 +2,7 @@ import "express-async-errors";
 import app from "./start/app";
 import { envs } from "./config/envs";
 import { MongoDatabase } from "./data/init";
+import { emailJob } from "./domain/jobs/email.job";
 
 console.log(">>> ENV VARIABLES", envs);
 
@@ -15,4 +16,5 @@ const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`>>> Listening on port ${PORT}...`);
+  emailJob();
 });
