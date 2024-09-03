@@ -72,9 +72,11 @@ export function generateIncidentEmailTemplate(
               <p><strong>Latitud:</strong> ${lat}</p>
               <p><strong>Longitud:</strong> ${lng}</p>
           </div>
+
           <div>
             <img class="map-image" src="${mapImageUrl}"/>
           </div>
+          
           <div class="footer">
               <p>Este es un correo generado automáticamente. Por favor, no responda a este mensaje.</p>
           </div>
